@@ -137,7 +137,6 @@ Performance Benchmark::
 
 Measure the delta in resolution time between a standard alias and a versioned alias to ensure no significant regressions in startup speed.
 
-
 === Links
 
 * https://github.com/jbangdev/jbang/issues/1979
