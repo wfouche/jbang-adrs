@@ -24,7 +24,8 @@
 |*deciders*
 a|
 // list everyone involved in the decision
-* #DECIDER#
+* Max Anderson
+* Tako Schotanus
 
 |*consulted*
 a|
@@ -56,18 +57,25 @@ The JBang `run` command can execute several different types of entities.
 ** jbang run org.example:myapp:1.0.0
 * Local JAR files
 ** jbang run ./hello-fatjar.jar
-* Aliases defined in a JBang catalogs
+* Aliases defined in JBang catalogs
 ** jbang run hello@jbangdev John
 
-Aliases are shortcuts that are imported from catalogs that in turn point to:
+JBang aliases serve as convenient shortcuts imported from catalogs. These aliases act as pointers to various executable resources, allowing you to run scripts or applications without remembering long URLs or file paths.
 
-. Script files (local or remote)
-. Gists (Github)
-. GAV coordinates (Maven artifacts)
-. Local JAR files
-. Aliases defined in JBang catalogs
+A JBang alias can point to:
+
+Scripts:: Local files or remote URLs.
+
+GitHub Gists:: Easily shareable code snippets.
+
+Maven Artifacts:: Identified via GAV coordinates (groupId:artifactId:version).
+
+Local JARs:: Pre-compiled Java archives.
+
+Nested Aliases:: Other aliases already defined within JBang catalogs.
 
 A JBang Alias can also be called a JBang Application. Just like with normal software applications, users want to be able to use different versions of the same JBang Application.
+JBang currently lacks a versioning mechanism for aliases.
 
 // This is an optional element. Feel free to remove.
 == Decision drivers [[decision-drivers]]
@@ -123,6 +131,10 @@ Automated Integration Tests::
 * Confirm that jbang alias (without a version) continues to default to the latest or main branch as per current behavior.
 
 * Ensure that invalid version strings return a clear, actionable error message rather than a stack trace.
+
+* A hello application that support versioning and is used in the tests should be added to the jbangdev catalog. This application should also support a `--version` option that prints the version of the application. For example, `jbang run hello:1.0.0@jbangdev --version` should print `1.0.0`.
+
+* The same hello application should be installed as an application using the `jbang app install` command. For example, `jbang app install hello:1.0.0@jbangdev` should install the application and `hello --version` should execute the installed application and print `1.0.0`.
 
 Cache Validation::
 
