@@ -109,7 +109,6 @@ The JBang local catalog will now need to store and manage version manifests or t
 Negative: Increased Disk Usage::
 Supporting multiple versions will naturally lead to more cached JARs and scripts.
 
-// This is an optional element. Feel free to remove.
 === Confirmation
 
 ////
