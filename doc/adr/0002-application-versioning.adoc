@@ -74,8 +74,9 @@ Local JARs:: Pre-compiled Java archives.
 
 Nested Aliases:: Other aliases already defined within JBang catalogs.
 
-A JBang Alias can also be called a JBang Application. Just like with normal software applications, users want to be able to use different versions of the same JBang Application.
-JBang currently lacks a versioning mechanism for aliases.
+A JBang Alias can also be called a JBang Application. And just like with any normal software application, users want to be able to use different versions of the same JBang Application. JBang however currently lacks a versioning mechanism for aliases.
+
+This document proposes a solution to add versioning support for JBang Applications. The proposed solution should allow users to specify the version of the application they want to install or run, while still maintaining backward compatibility with the current behavior of JBang.
 
 // This is an optional element. Feel free to remove.
 == Decision drivers [[decision-drivers]]
