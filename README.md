@@ -1,5 +1,7 @@
 # jbang-adrs
-ADRs for jbang and jbangorg related projects
+ADRs for jbang and jbangorg related projects. 
+
+See [ADR TOC](doc/adr/toc.md) for a list of available ADRs.
 
 
 ## Managing ADRs
