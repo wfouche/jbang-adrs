@@ -45,7 +45,7 @@ Describe the context and problem statement, e.g., in free form using two to thre
 You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.
 ////
 
-The JBang `run` command can execute several different types of entities.
+JBang commands such as `run`, `build`, `info` operate on several different types of entities.
 
 * Local source files
 ** jbang run HelloWorld.java
@@ -60,7 +60,7 @@ The JBang `run` command can execute several different types of entities.
 * Aliases defined in JBang catalogs
 ** jbang run hello@jbangdev John
 
-JBang aliases serve as convenient shortcuts imported from catalogs. These aliases act as pointers to various executable resources, allowing you to run scripts or applications without remembering long URLs or file paths.
+JBang aliases serve as convenient shortcuts imported from catalogs. These aliases act as pointers to various executable entities, allowing you to run scripts or applications without remembering long URLs or file paths.
 
 A JBang alias can point to:
 
