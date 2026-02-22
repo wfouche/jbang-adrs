@@ -109,12 +109,6 @@ This section outlines the ripple effects—both the wins and the new responsibil
 Positive: Reproducible Workflows::
 Users can now pin aliases to specific versions (e.g., jbang mytool:1.2.3@catalog), ensuring CI/CD pipelines and scripts don't break when a remote alias is updated.
 
-Positive: Parallel Testing::
-Developers can run multiple versions of the same alias side-by-side for regression testing without manual environment switching.
-
-Neutral: Metadata Overhead::
-The JBang local catalog will now need to store and manage version manifests or tags, slightly increasing the complexity of the local state.
-
 Negative: Increased Disk Usage::
 Supporting multiple versions will naturally lead to more cached JARs and scripts.
 
