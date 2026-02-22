@@ -109,8 +109,10 @@ This section outlines the ripple effects—both the wins and the new responsibil
 Positive: Reproducible Workflows::
 Users can now pin aliases to specific versions (e.g., jbang mytool:1.2.3@catalog), ensuring CI/CD pipelines and scripts don't break when a remote alias is updated.
 
-Negative: Increased Disk Usage::
-Supporting multiple versions will naturally lead to more cached JARs and scripts.
+Positive: Slight Decrease in Disk Usage::
+Since JBang will no longer fetch the latest version of an application, this would lead to fewer cached JARs and scripts.
+
+Negative::  None that comes to mind.
 
 === Confirmation
 
