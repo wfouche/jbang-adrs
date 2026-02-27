@@ -24,8 +24,8 @@
 |*deciders*
 a|
 // list everyone involved in the decision
-* Max Anderson
-* Tako Schotanus
+* https://github.com/maxandersen[Max Andersen]
+* https://github.com/quintesse[Tako Schotanus]
 
 |*consulted*
 a|
