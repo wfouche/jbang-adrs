@@ -149,3 +149,28 @@ Measure the delta in resolution time between a standard alias and a versioned al
 
 * https://github.com/jbangdev/jbang/issues/1979
 
+[appendix]
+== Implementation Notes
+
+`default-version`::
+The default version of an alias can be defined in the catalog as a new property. For example, the `camel` alias in the example catalog file has a default version of `4.18.0`. This means that if a user runs `jbang run camel@catalog`, JBang will use version `4.18.0` of the `camel` alias, and the `${version}` placeholder will be replaced with `4.18.0` in the alias definition.
+
+`${version}` placeholder::
+The `${version}` placeholder can be used in any of the string value fields of the alias definition. When a user specifies a version for the alias, JBang will replace the `${version}` placeholder with the specified version. For example, if a user runs `jbang run camel:4.17.0@catalog`, JBang will replace `${version}` with `4.17.0` in the `properties` field of the `camel` alias. Placeholder substitution is not limited to the `properties` field, it can be used in any string value of the alias definition, such as `script-ref` or other fields.
+
+.Example jbang-catalog.json file
+[source,json]
+----
+{
+  "aliases": {
+    "camel": {
+      "default-version": "4.18.0",
+      "script-ref": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
+      "properties": {
+        "camel.jbang.version": "${version}",
+        "camel-kamelets.version": "${version}"
+      }
+    }
+  }
+}
+----
